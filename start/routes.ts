@@ -20,8 +20,6 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return { hello: 'world' }
-})
-
-Route.get('v1/projects', 'DashboardController.getAllProjects')
+Route.get('v1/projects', 'ProjectcostController.getAllProjects')
+Route.post('v1/projects', 'ProjectcostController.store')
+Route.put('v1/projects', 'ProjectcostController.update')
